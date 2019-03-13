@@ -20,7 +20,7 @@ program against the %IMP library using the
 First, download the files for this tutorial by using the "Clone or download"
 link at the [tutorial's GitHub page](https://github.com/salilab/imp_using_cpp_tutorial/tree/develop).
 
-@note This tutorial uses functionality only introduced in %IMP on Feb 1st, 2019.      It will not work with the latest stable release (2.10.0). Either download
+@note This tutorial uses functionality only introduced in %IMP on Feb 1st, 2019.      It will not work with the latest stable release (2.10.1). Either download
       a [nightly build](https://integrativemodeling.org/download.html#develop)
       or [build from source](@ref installation_source) using the `develop`
       branch from GitHub.
