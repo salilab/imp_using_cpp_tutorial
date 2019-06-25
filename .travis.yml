@@ -3,8 +3,11 @@ language: python
 dist: xenial
 python:
   - 3.7
+env:
+  - IMP_BRANCH=develop
+  - IMP_BRANCH=master
 install:
-  - source support/setup_travis.sh $HOME/miniconda $TRAVIS_PYTHON_VERSION
+  - source support/setup_travis.sh $HOME/miniconda $IMP_BRANCH $TRAVIS_PYTHON_VERSION
   - python -V
 script:
   - mkdir build
