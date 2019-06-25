@@ -18,12 +18,12 @@ program against the %IMP library using the
 [CMake build system](https://cmake.org/).
 
 First, download the files for this tutorial by using the "Clone or download"
-link at the [tutorial's GitHub page](https://github.com/salilab/imp_using_cpp_tutorial/tree/develop).
+link at the [tutorial's GitHub page](https://github.com/salilab/imp_using_cpp_tutorial/).
 
 # Test program {#program}
 
 First, let's look at the C++ program that will use %IMP functionality,
-[simple.cpp](https://github.com/salilab/imp_using_cpp_tutorial/blob/develop/simple.cpp):
+[simple.cpp](https://github.com/salilab/imp_using_cpp_tutorial/blob/master/simple.cpp):
 
 @include "simple.cpp"
 
@@ -34,7 +34,7 @@ the simple Python example [in the IMP manual](@ref library_example).
 
 # FindIMP CMake module {#findimp}
 
-The [FindIMP.cmake](https://github.com/salilab/imp_using_cpp_tutorial/blob/develop/tools/FindIMP.cmake)
+The [FindIMP.cmake](https://github.com/salilab/imp_using_cpp_tutorial/blob/master/tools/FindIMP.cmake)
 file, in the `tools` subdirectory, is a script that helps CMake find your
 %IMP installation. When %IMP is built or installed, it creates a file called
 `IMPConfig.cmake` which contains information about how %IMP was configured
@@ -52,7 +52,7 @@ file. It can be copied verbatim into your own CMake projects.
 # CMake script (CMakeLists.txt) {#cmakelists}
 
 The main control script for CMake is
-[CMakeLists.txt](https://github.com/salilab/imp_using_cpp_tutorial/blob/develop/CMakeLists.txt).
+[CMakeLists.txt](https://github.com/salilab/imp_using_cpp_tutorial/blob/master/CMakeLists.txt).
 This is a very simple file that instructs CMake to find %IMP, and build an
 executable from our input file `simple.cpp`. If you have not used CMake
 before, the [CMake tutorial](https://cmake.org/cmake-tutorial/) is a good
