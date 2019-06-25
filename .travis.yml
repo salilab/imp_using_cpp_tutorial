@@ -1,0 +1,14 @@
+sudo: false
+language: python
+dist: xenial
+python:
+  - 3.7
+install:
+  - source support/setup_travis.sh $HOME/miniconda $TRAVIS_PYTHON_VERSION
+  - python -V
+script:
+  - mkdir build
+  - cd build
+  - cmake .. -DIMP_DIR=${CONDA_PREFIX}/lib/cmake/IMP
+  - make
+  - ./simple
