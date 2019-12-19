@@ -1,4 +1,6 @@
+.cache
+.ipynb_checkpoints
 Doxyfile
+using_cpp.md
+using_cpp.py
 html
-manual-tags.xml
-ref-tags.xml
