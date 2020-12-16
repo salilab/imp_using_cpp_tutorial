@@ -1,0 +1,36 @@
+name: build
+
+on:
+  push:
+  pull_request:
+  schedule:
+  - cron: "18 3 * * 0"  # Run at a random time weekly
+
+jobs:
+  build:
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [3.8]
+        imp-branch: [master, develop]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: Setup conda
+      run: |
+        support/setup_travis.sh ~/conda ${{ matrix.imp-branch }} ${{ matrix.python-version }}
+    - name: Test
+      run: |
+        source ~/conda/bin/activate python${{ matrix.python-version }}
+        # Use same C/C++ compiler as conda
+        source ${CONDA_PREFIX}/etc/conda/activate.d/activate-gcc_linux-64.sh
+        source ${CONDA_PREFIX}/etc/conda/activate.d/activate-gxx_linux-64.sh
+        mkdir build && cd build
+        cmake .. -DIMP_DIR=${CONDA_PREFIX}/lib/cmake/IMP
+        make
+        ./simple

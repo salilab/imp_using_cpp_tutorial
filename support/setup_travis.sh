@@ -37,9 +37,6 @@ conda update --yes -q conda
 conda create --yes -q -n python${python_version} -c salilab python=${python_version} ${IMP_CONDA} gxx_linux-64 eigen cmake
 source activate python${python_version}
 
-source ${CONDA_PREFIX}/etc/conda/activate.d/activate-gcc_linux-64.sh
-source ${CONDA_PREFIX}/etc/conda/activate.d/activate-gxx_linux-64.sh
-
 cd ${cur_dir}
 
 rm -rf ${temp_dir}
