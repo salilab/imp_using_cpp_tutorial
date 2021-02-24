@@ -1,3 +1,4 @@
 title: Using IMP as a C++ library
+depends: [coding]
 description: >
     This covers using IMP as a C++ library in other C++ projects.
