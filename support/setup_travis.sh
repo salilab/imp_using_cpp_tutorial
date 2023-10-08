@@ -18,7 +18,7 @@ conda config --add channels conda-forge
 if [ ${imp_branch} = "develop" ]; then
   IMP_CONDA="imp-nightly"
 else
-  IMP_CONDA="imp"
+  IMP_CONDA="imp libboost-devel"
 fi
 
 cd ${temp_dir}
