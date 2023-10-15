@@ -18,12 +18,12 @@ conda config --add channels conda-forge
 if [ ${imp_branch} = "develop" ]; then
   IMP_CONDA="imp-nightly"
 else
-  IMP_CONDA="imp libboost-devel"
+  IMP_CONDA="imp"
 fi
 
 cd ${temp_dir}
 
-conda create --yes -q -n python${python_version} -c salilab python=${python_version} ${IMP_CONDA} gxx_linux-64 eigen cereal cmake
+conda create --yes -q -n python${python_version} -c salilab python=${python_version} ${IMP_CONDA} libboost-devel gxx_linux-64 eigen cereal cmake
 eval "$(conda shell.bash hook)"
 conda activate python${python_version}
 
