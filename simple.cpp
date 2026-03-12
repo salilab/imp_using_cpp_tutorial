@@ -19,13 +19,13 @@ int main(int argc, char *argv[]) {
   IMP_NEW(IMP::Model, m, ());
 
   // Create two "untyped" particles
-  IMP::ParticleIndex p1 = m->add_particle("p1");
-  IMP::ParticleIndex p2 = m->add_particle("p2");
+  auto p1 = m->add_particle("p1");
+  auto p2 = m->add_particle("p2");
 
   // "Decorate" the particles with x,y,z attributes (point-like
   // particles)
-  IMP::core::XYZ d1 = IMP::core::XYZ::setup_particle(m, p1);
-  IMP::core::XYZ d2 = IMP::core::XYZ::setup_particle(m, p2);
+  auto d1 = IMP::core::XYZ::setup_particle(m, p1);
+  auto d2 = IMP::core::XYZ::setup_particle(m, p2);
 
   // Use some XYZ-specific functionality (set coordinates)
   d1.set_coordinates(IMP::algebra::Vector3D(10.0, 10.0, 10.0));
