@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.12...3.6.0)
+cmake_minimum_required(VERSION 2.8.12...4.2)
 project(using_cpp)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/tools)
