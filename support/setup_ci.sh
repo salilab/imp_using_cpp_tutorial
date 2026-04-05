@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
-# Set up an environment to run tests under Travis CI (see ../.travis.yml)
+# Set up an environment to run tests under Travis CI or GitHub Actions
+# (see .github/workflows/build.yml)
 
 if [ $# -ne 2 ]; then
   echo "Usage: $0 imp_branch python_version"
